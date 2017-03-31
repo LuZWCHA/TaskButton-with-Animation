@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TaskButton">
+        <attr name="button_color" format="color"></attr>
+        <attr name="button_text_color" format="color"></attr>
+        <attr name="button_textsize" format="dimension"></attr>
+        <attr name="text_maxsize" format="dimension"></attr>
+        <attr name="text_minsize" format="dimension"></attr>
+        <attr name="animation_speed" format="integer"></attr>
+        <attr name="button_press_color" format="color"></attr>
+        <attr name="button_text" format="string"></attr>
+        <attr name="animation_timeout" format="integer"></attr>
+    </declare-styleable>
+</resources>
