@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lu.indexpagedemo.view.fragments.NowPageInnerFragments.NowRecommendFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <in.srain.cube.views.ptr.PtrFrameLayout
+        android:id="@+id/now_recommend_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.lu.indexpagedemo.view.adapters.MyRecyclerView
+            android:background="@color/colorInActive"
+            android:id="@+id/now_recommend_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.lu.indexpagedemo.view.adapters.MyRecyclerView>
+    </in.srain.cube.views.ptr.PtrFrameLayout>
+
+</FrameLayout>

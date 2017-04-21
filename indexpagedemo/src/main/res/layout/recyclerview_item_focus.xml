@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_item"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="72dp">
+
+    <LinearLayout
+        android:id="@+id/disfocus"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/colorBlack">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:clickable="false"
+            app:actualImageResource="@drawable/ic_disfocus" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorMainBackGround"
+            android:layout_marginTop="@dimen/dp_4"
+            android:clickable="false"
+            android:textSize="8sp"
+            android:text="取消关注"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/focus_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMainBackGround"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/focus_item_header"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:clickable="false"
+            app:roundAsCircle="true"
+            app:actualImageResource="@drawable/ic_designer_1"/>
+        <TextView
+            android:id="@+id/focus_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:padding="@dimen/dp_10"
+            android:text="测试"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>

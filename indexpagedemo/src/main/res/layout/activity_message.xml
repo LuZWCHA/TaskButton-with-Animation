@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lu.indexpagedemo.view.simpleviews.MessageActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/message_toolbar"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_36dp">
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/messageList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dateHeaderFormat="dd MMMM yyyy"
+        app:incomingDefaultBubbleColor="@color/colorPrimary"
+        app:incomingDefaultBubblePressedColor="@color/colorPrimaryDark"
+        app:incomingDefaultBubbleSelectedColor="@color/gray"
+        app:incomingDefaultImageOverlayPressedColor="@color/black"
+        app:incomingDefaultImageOverlaySelectedColor="@color/colorPrimaryDark"
+        app:incomingTextColor="@color/black"
+        app:incomingTextLinkColor="@color/colorClearBlue"
+        app:incomingTextSize="18sp"
+        app:outcomingDefaultBubbleColor="@color/colorAccent"
+        app:outcomingDefaultBubblePressedColor="@color/colorPrimaryDark"
+        app:outcomingDefaultBubbleSelectedColor="@color/colorPrimaryDark"
+        app:outcomingDefaultImageOverlayPressedColor="@color/black"
+        app:outcomingDefaultImageOverlaySelectedColor="@color/colorPrimaryDark"
+        app:outcomingTextColor="@color/white"
+        app:outcomingTextLinkColor="@color/blue"
+        app:outcomingTextSize="18sp"
+        app:textAutoLink="all"
+        android:layout_below="@+id/message_toolbar"
+        android:layout_above="@+id/input">
+    </com.stfalcon.chatkit.messages.MessagesList>
+
+    <View
+        android:id="@+id/line0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorInActive"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_above="@+id/input" />
+
+    <com.stfalcon.chatkit.messages.MessageInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:inputButtonDefaultBgColor="@color/colorAccent"
+        app:inputHint="输入内容"
+        android:id="@+id/input"
+        android:layout_alignParentBottom="true">
+
+    </com.stfalcon.chatkit.messages.MessageInput>
+
+</RelativeLayout>

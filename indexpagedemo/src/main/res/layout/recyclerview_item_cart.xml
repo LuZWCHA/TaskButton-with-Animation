@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cart_item_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:clickable="true"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@drawable/ripple_background">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:clickable="false">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/cart_item_work_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            app:actualImageResource="@color/colorAccent"
+            android:clickable="false"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:clickable="false">
+
+        <TextView
+            android:id="@+id/cart_item_work_content"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text=""
+            android:textSize="18sp"
+            android:clickable="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:clickable="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/Yuan2"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/cart_item_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:clickable="false"/>
+
+            <com.lu.indexpagedemo.bean.base.customview.GoodsView
+                android:id="@+id/cart_item_num_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/dp_40"
+                app:lu_maxnum="99"
+                app:lu_textsize="@dimen/sp_16"
+                app:decreaseRes="@drawable/ic_minus"
+                app:increaseRes="@drawable/ic_plus"
+                android:layout_margin="@dimen/dp_4"
+                android:gravity="center_vertical">
+
+            </com.lu.indexpagedemo.bean.base.customview.GoodsView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

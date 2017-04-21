@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/address_item_view"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@color/colorMainBackGround"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/address_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:text="地址"
+            android:textColor="@color/colorBackGround"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/name_phonenum_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:text="xxxx先生 156。。。。。。。。"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="8dp"
+        android:layout_height="13dp"
+        android:layout_gravity="end|top"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/fragmentation_ic_right"
+        android:clickable="false" />
+
+</LinearLayout>

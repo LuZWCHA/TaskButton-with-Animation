@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lu.indexpagedemo.view.activitys.CartActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/cart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/mycart"
+        android:background="@color/colorMainBackGround"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_36dp">
+    </android.support.v7.widget.Toolbar>
+
+    <com.lu.indexpagedemo.view.adapters.MyRecyclerView
+        android:id="@+id/cart_items_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </com.lu.indexpagedemo.view.adapters.MyRecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorMainBackGround">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/sum"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginStart="20sp"/>
+
+        <TextView
+            android:id="@+id/cart_sum_price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="100"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_marginStart="@dimen/dp_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Yuan"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_margin="@dimen/dp_10"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/cart_commit_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="@string/commit"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorMainBackGround"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

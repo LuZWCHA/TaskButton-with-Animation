@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lu.indexpagedemo.view.simpleviews.DailogActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/dialog_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="我的对话"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_36dp">
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.stfalcon.chatkit.dialogs.DialogsList
+        android:id="@+id/dialogList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dialogDividerLeftPadding="0dp"
+        app:dialogMessageTextSize="17sp"
+        app:dialogTitleTextStyle="bold"
+        app:dialogUnreadBubbleBackgroundColor="@color/liji_material_red_500"
+        app:dialogUnreadItemBackground="@color/colorInActive"
+        app:dialogUnreadTitleTextStyle="bold">
+
+    </com.stfalcon.chatkit.dialogs.DialogsList>
+
+
+</LinearLayout>

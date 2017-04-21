@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GoodsView">
+        <attr name="decreaseRes" format="reference" />
+        <attr name="increaseRes" format="reference" />
+        <attr name="lu_textcolor" format="color" />
+        <attr name="lu_textsize" format="dimension" />
+        <attr name="lu_maxnum" format="integer" />
+        <attr name="lu_minnum" format="integer" />
+    </declare-styleable>
+
+</resources>

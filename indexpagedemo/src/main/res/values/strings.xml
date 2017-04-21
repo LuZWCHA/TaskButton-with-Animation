@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">IndexpageDemo</string>
+    <string name="explore_main_bottombar">探 索</string>
+    <string name="like_mian_botttombar">心 愿</string>
+    <string name="desincould_main_bottombar">设计库</string>
+    <string name="now_main_bottom">动 态</string>
+    <string name="mycenter_main_bottombar">我 的</string>
+    <string name="recyclerview_item_mbnt_title">最新订购</string>
+    <string name="recyclerview_item_content">内容</string>
+
+    <!--the titles in indexfragment-->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="usercenter_tablayout_order_title">订单</string>
+    <string name="usercenter_tablayout_collection_title">收藏</string>
+    <string name="usercenter_lablayout_like_title">关注</string>
+    <string name="address">收货地址</string>
+    <string name="cart">购物车</string>
+    <string name="order">我的订单</string>
+    <string name="wantedorder">心愿单</string>
+    <string name="money">我的丝金</string>
+    <string name="messages">消息中心</string>
+    <string name="setting">设置</string>
+    <string name="question">疑问</string>
+    <string name="myaddress">我的收货地址</string>
+    <string name="no_address_tip">你还没有添加过地址哦！</string>
+    <string name="image_picker_text">完 成</string>
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Settings</string>
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="sum">总价:</string>
+    <string name="Yuan">元</string>
+    <string name="commit">结 算</string>
+    <string name="mycart">购物车</string>
+    <string name="Yuan2">￥</string>
+    <string name="delete_cart_item">是否删除该商品?</string>
+    <string name="copy">复制</string>
+    <string name="delete">删除</string>
+    <string name="select_address">选择你的地址</string>
+    <string name="choose_size">选择你的尺寸</string>
+    <string name="custom_num_select">填写数量</string>
+    <string name="custom_description">描述一下你的要求</string>
+    <string name="custom_title">填写你的标题</string>
+    <string name="custom_hint_num">购买数目</string>
+    <string name="custom_submit">提 交</string>
+    <string name="not_choose">未选择</string>
+    <string name="single_price">商品单价：</string>
+    <string name="total_price">总 价：</string>
+    <string name="point_one_zero">0.0</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="designer">设计师：</string>
+    <string name="whating_user">关注者</string>
+    <string name="unit_ren">人</string>
+    <string name="title">商品概述</string>
+    <string name="test_text1">这是我的第一款作品，请大家多多支持！</string>
+</resources>

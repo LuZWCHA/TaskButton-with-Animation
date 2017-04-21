@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lu.indexpagedemo.view.activitys.FocusActivity"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/focus_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainBackGround"
+        app:title="我的关注"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_36dp">
+    </android.support.v7.widget.Toolbar>
+    <in.srain.cube.views.ptr.PtrFrameLayout
+        android:id="@+id/focus_ptrframelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp" />
+        <com.lu.indexpagedemo.view.adapters.MyRecyclerView
+            android:id="@+id/focus_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.lu.indexpagedemo.view.adapters.MyRecyclerView>
+    </in.srain.cube.views.ptr.PtrFrameLayout>
+
+</LinearLayout>

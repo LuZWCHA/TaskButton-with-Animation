@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimenTitleSize">20dp</dimen>
+
+    <!--login dimen-->
+    <dimen name="toolbar_editor_distance">16dp</dimen>
+    <dimen name="editor_left_right_margin">16dp</dimen>
+</resources>

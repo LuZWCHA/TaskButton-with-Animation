@@ -114,7 +114,7 @@ public class TaskButton extends View {
             textChanged = true;
         Text = text;
 
-        invalidate();
+        postInvalidate();
     }
     
     public void setSpeed(float rate) throws IllegalAccessException {
@@ -130,7 +130,7 @@ public class TaskButton extends View {
         DoAnm.setDuration(duration*10);
         StartAnm.setDuration(duration*2);
         FinishAnm.setDuration(duration*2);
-        invalidate();
+        postInvalidate();
     }
     
     public void setMaxTextSize(int size) throws Exception {
@@ -151,7 +151,7 @@ public class TaskButton extends View {
         if(minTextSize >= MIN_TEXT_SIZE && minTextSize <= MAX_TEXT_SIZE && maxTextSize >= minTextSize) {
             TextSize = textSize;
 
-            invalidate();
+            postInvalidate();
         }
         else
             throw new Exception("size error");
@@ -160,20 +160,20 @@ public class TaskButton extends View {
     public void setTextColor(int color)
     {
         TextColor = color;
-        invalidate();
+        postInvalidate();
     }
 
     public void setButtonColor(int color)
     {
         buttonColor = color;
         ButtonNormalColor = color;
-        invalidate();
+        postInvalidate();
     }
 
     public void setButtonPressColor(int color)
     {
         ButtonPressColor = color;
-        invalidate();
+        postInvalidate();
     }
 
     public TaskButton.State getCurState()

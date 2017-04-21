@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyDemos</string>
+
+    <!--login strings-->
+    <string name="login_toolbar_title">登 录</string>
+    <string name="login_inputview_username">用户名</string>
+    <string name="login_inputview_password">密  码</string>
+
+</resources>

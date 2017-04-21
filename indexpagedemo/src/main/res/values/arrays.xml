@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="selector_spinner">
+        <item>男</item>
+        <item>女</item>
+        <item>保密</item>
+    </array>
+
+    <array name="indexpage_viewpager_titles">
+        <item>推 荐</item>
+        <item>丝 物</item>
+        <item>设计师</item>
+    </array>
+
+    <array name="now_viewpager_titles">
+        <item>推 荐</item>
+        <item>素 材</item>
+        <item>系 法</item>
+        <item>搭 配</item>
+    </array>
+
+    <array name="custom_selector">
+        <item>智能匹配</item>
+        <item>设计师模式</item>
+        <item>自主选择</item>
+    </array>
+
+    <array name="custom_size_select">
+        <item>30x180(cm)</item>
+        <item>50x50(cm)</item>
+    </array>
+
+    <array name="test">
+        <item>https://images.pexels.com/photos/267007/pexels-photo-267007.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/270102/pexels-photo-270101.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/288393/pexels-photo-288393.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/211471/pexels-photo-211471.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/3973/bench-forest-trees-path.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/29577/pexels-photo-29577.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/25043/pexels-photo.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/223023/pexels-photo-223023.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/223022/pexels-photo-223022.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+        <item>https://images.pexels.com/photos/199373/pexels-photo-199373.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+    </array>
+</resources>

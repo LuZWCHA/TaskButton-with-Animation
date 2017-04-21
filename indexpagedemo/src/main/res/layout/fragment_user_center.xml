@@ -1,0 +1,560 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/usercenter_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lu.indexpagedemo.view.fragments.UserCenterFragment">
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+                <!--background-->
+
+                <!--header-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/usercenter_backwall"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:actualImageResource="@drawable/materialdesign_background" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/usercenter_head"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="75dp"
+                    app:actualImageResource="@drawable/ic_account_circle_white_48dp"
+                    app:actualImageScaleType="centerCrop"
+                    app:roundAsCircle="true" />
+                <!--nike name-->
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="135dp"
+                    android:layout_marginStart="135dp"
+                    android:layout_marginTop="100dp"
+                    android:elevation="0dp"
+                    android:text="Johnney"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/simpleDraweeView"
+                    android:layout_width="5dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="110dp"
+                    android:background="@drawable/fragmentation_ic_right"
+                    android:clickable="false"
+                    android:padding="5dp" />
+
+            </FrameLayout>
+
+            <!--some useful application-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardElevation="0dp">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    style="@android:style/Widget.Material.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorMainBackGround"
+                    android:theme="@style/Base.CardView">
+
+                    <LinearLayout
+                        android:id="@+id/myorders"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_background"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:clickable="false"
+                            app:actualImageResource="@drawable/ic_order"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="@string/order"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp"
+                            android:typeface="monospace" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cart"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ripple_background"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:clickable="false"
+                            app:actualImageResource="@drawable/ic_cart"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/cart"
+                            android:clickable="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp"
+                            android:typeface="monospace" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addresslinearlayout"
+                        android:background="@drawable/ripple_background"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/simpleDraweeView2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_address" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/address"
+                            android:textAppearance="@style/TextAppearance.AppCompat"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.CardView>
+
+            <!--application set1-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/line">
+
+                    <LinearLayout
+                        android:id="@+id/mymoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/simpleDraweeView3"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:clickable="false"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_money" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:fontFamily="monospace"
+                            android:gravity="start|center_vertical"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingStart="@dimen/dp_10"
+                            android:text="@string/money"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:typeface="monospace" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="23dp"
+                            android:background="@drawable/fragmentation_ic_right"
+                            android:clickable="false"
+                            android:paddingEnd="@dimen/dp_4"
+                            android:paddingStart="@dimen/dp_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mylove"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:clickable="false"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_like" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:fontFamily="monospace"
+                            android:gravity="start|center_vertical"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingStart="@dimen/dp_10"
+                            android:text="@string/wantedorder"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:typeface="monospace" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="23dp"
+                            android:background="@drawable/fragmentation_ic_right"
+                            android:clickable="false"
+                            android:paddingEnd="@dimen/dp_4"
+                            android:paddingStart="@dimen/dp_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/myfocus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:clickable="false"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_focus" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:fontFamily="monospace"
+                            android:gravity="start|center_vertical"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingStart="@dimen/dp_10"
+                            android:text="关注的设计师"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:typeface="monospace"
+                            tools:ignore="HardcodedText" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="23dp"
+                            android:background="@drawable/fragmentation_ic_right"
+                            android:clickable="false"
+                            android:paddingEnd="@dimen/dp_4"
+                            android:paddingStart="@dimen/dp_4" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--application set2-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:divider="@drawable/line">
+
+                    <LinearLayout
+                        android:id="@+id/messagecenter"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:clickable="false"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_message" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:fontFamily="monospace"
+                            android:gravity="start|center_vertical"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingStart="@dimen/dp_10"
+                            android:text="@string/messages"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:typeface="monospace" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="23dp"
+                            android:background="@drawable/fragmentation_ic_right"
+                            android:clickable="false"
+                            android:paddingEnd="@dimen/dp_4"
+                            android:paddingStart="@dimen/dp_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/server"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:clickable="false"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_serve" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:fontFamily="monospace"
+                            android:gravity="start|center_vertical"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingStart="@dimen/dp_10"
+                            android:text="客服"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:typeface="monospace"
+                            tools:ignore="HardcodedText" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="23dp"
+                            android:background="@drawable/fragmentation_ic_right"
+                            android:clickable="false"
+                            android:paddingEnd="@dimen/dp_4"
+                            android:paddingStart="@dimen/dp_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:clickable="false"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_setting" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:fontFamily="monospace"
+                            android:gravity="start|center_vertical"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingStart="@dimen/dp_10"
+                            android:text="@string/setting"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:typeface="monospace" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="23dp"
+                            android:background="@drawable/fragmentation_ic_right"
+                            android:clickable="false"
+                            android:paddingEnd="@dimen/dp_4"
+                            android:paddingStart="@dimen/dp_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/question"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:clickable="false"
+                            android:scaleType="centerCrop"
+                            app:actualImageResource="@drawable/ic_questions" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:fontFamily="monospace"
+                            android:gravity="start|center_vertical"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingStart="@dimen/dp_10"
+                            android:text="@string/question"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="15sp"
+                            android:typeface="monospace" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="23dp"
+                            android:background="@drawable/fragmentation_ic_right"
+                            android:clickable="false"
+                            android:paddingEnd="@dimen/dp_4"
+                            android:paddingStart="@dimen/dp_4" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--application set3-->
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/message"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end|top"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:actualImageScaleType="centerInside"
+        app:roundAsCircle="true"
+        app:actualImageResource="@drawable/ic_information"/>
+</FrameLayout>

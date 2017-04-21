@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyDemos.iml" filepath="$PROJECT_DIR$/MyDemos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatdemo/chatdemo.iml" filepath="$PROJECT_DIR$/chatdemo/chatdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatkit/chatkit.iml" filepath="$PROJECT_DIR$/chatkit/chatkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/detilpagedemo/detilpagedemo.iml" filepath="$PROJECT_DIR$/detilpagedemo/detilpagedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/indexpagedemo/indexpagedemo.iml" filepath="$PROJECT_DIR$/indexpagedemo/indexpagedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytablayout/mytablayout.iml" filepath="$PROJECT_DIR$/mytablayout/mytablayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytaskbutton/mytaskbutton.iml" filepath="$PROJECT_DIR$/mytaskbutton/mytaskbutton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uploaddemo/uploaddemo.iml" filepath="$PROJECT_DIR$/uploaddemo/uploaddemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/welcomeloginpagedemos/welcomeloginpagedemos.iml" filepath="$PROJECT_DIR$/welcomeloginpagedemos/welcomeloginpagedemos.iml" />
+    </modules>
+  </component>
+</project>

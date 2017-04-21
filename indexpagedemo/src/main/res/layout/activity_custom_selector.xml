@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lu.indexpagedemo.view.activitys.CustomSelectorActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainBackGround"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_36dp"
+        app:title="开始定制"></android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.gigamole.navigationtabstrip.NavigationTabStrip
+                        android:id="@+id/custom_tab_strip"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="20dp"
+                        app:nts_active_color="@color/colorAccent"
+                        app:nts_animation_duration="200"
+                        app:nts_color="@color/colorAccent"
+                        app:nts_factor="1"
+                        app:nts_gravity="top"
+                        app:nts_inactive_color="@color/colorInActive"
+                        app:nts_size="13sp"
+                        app:nts_titles="@array/custom_selector"
+                        app:nts_type="point"
+                        app:nts_weight="@dimen/dp_4" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/line"
+                    android:dividerPadding="2dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/custom_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_weight="4"
+                            android:background="@null"
+                            android:hint="@string/custom_title"
+                            android:maxLength="16"
+                            android:maxLines="2"
+                            android:padding="22dp"
+                            android:textColorHint="@color/colorInActive"
+                            android:textSize="@dimen/sp_16" />
+
+                        <RadioGroup
+                            android:id="@+id/custom_material"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:checkedButton="@+id/scraf1"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/scraf1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="丝巾定制"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/scraf2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="围巾定制"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/custom_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="@string/custom_description"
+                        android:minLines="3"
+                        android:padding="22dp"
+                        android:textAlignment="textStart"
+                        android:textColorHint="@color/colorInActive"
+                        android:textSize="@dimen/sp_14" />
+
+                    <com.lu.indexpagedemo.view.adapters.MyRecyclerView
+                        android:id="@+id/custom_pic_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:minHeight="100dp">
+
+                    </com.lu.indexpagedemo.view.adapters.MyRecyclerView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/line"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+                    <LinearLayout
+                        android:id="@+id/custom_address_select_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:clickable="false"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/select_address"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:textSize="@dimen/sp_16"/>
+
+                        <TextView
+                            android:id="@+id/custom_address_choose_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/sp_16"
+                            android:hint="@string/not_choose"
+                            android:gravity="center_vertical"
+                            android:maxEms="10"
+                            android:maxLines="3"
+                            android:layout_marginEnd="24dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/choose_size"
+                            android:textSize="@dimen/sp_16"/>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/custom_size_choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="20dp"
+                            android:background="@null"
+                            android:entries="@array/custom_size_select">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/custom_num_select"
+                            android:textSize="@dimen/sp_16"/>
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/custom_num_choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:layout_marginEnd="24dp"
+                            android:inputType="number"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            android:hint="@string/custom_hint_num"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/single_price"
+                    android:textSize="@dimen/sp_16"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/custom_single_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/point_one_zero"
+                    android:gravity="center_vertical"/>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/total_price"
+                    android:layout_marginStart="20dp"
+                    android:textSize="@dimen/sp_16"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/custom_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="24sp"
+                    android:text="@string/point_one_zero"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="24dp"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/custom_submit"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="20dp"
+                android:text="@string/custom_submit"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

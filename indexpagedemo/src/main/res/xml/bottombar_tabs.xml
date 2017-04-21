@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+        <tab
+            id="@+id/bottombar_indexpage"
+            inActiveColor="@color/colorInActive"
+            activeColor="@color/colorActive"
+            icon="@drawable/ic_main_bottombar_explore"
+            title="@string/explore_main_bottombar" />
+        <!--<tab-->
+            <!--id="@+id/bottombar_love"-->
+            <!--inActiveColor="@color/colorInActive"-->
+            <!--activeColor="@color/colorActive"-->
+            <!--icon="@drawable/ic_main_bottombar_love"-->
+            <!--title="@string/like_mian_botttombar" />-->
+        <tab
+            id="@+id/bottombar_customization"
+            inActiveColor="@color/colorInActive"
+            activeColor="@color/colorActive"
+            icon="@drawable/ic_main_bottombar_customization"
+            title="@string/desincould_main_bottombar" />
+
+        <tab
+            id="@+id/bottombar_now"
+            inActiveColor="@color/colorInActive"
+            activeColor="@color/colorActive"
+            icon="@drawable/ic_main_bottombar_now"
+            title="@string/now_main_bottom" />
+
+        <tab
+            id="@+id/bottombar_usercenter"
+            inActiveColor="@color/colorInActive"
+            activeColor="@color/colorActive"
+            icon="@drawable/ic_main_bottombar_usercenter"
+            title="@string/mycenter_main_bottombar">
+        </tab>
+</tabs>
