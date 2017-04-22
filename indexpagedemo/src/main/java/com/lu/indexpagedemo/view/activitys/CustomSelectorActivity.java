@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
@@ -17,7 +16,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -32,15 +30,18 @@ import com.imnjh.imagepicker.activity.PhotoPickerActivity;
 import com.lu.indexpagedemo.R;
 import com.lu.indexpagedemo.base.Tools.Constant;
 import com.lu.indexpagedemo.base.Tools.Utils;
+import com.lu.indexpagedemo.base.mvp.MvpBaseActivity;
 import com.lu.indexpagedemo.bean.AddressBean;
+import com.lu.indexpagedemo.contract.CustomSelectContract;
+import com.lu.indexpagedemo.presenter.CustomPresenterImpl;
 import com.lu.indexpagedemo.view.adapters.MyRecyclerView;
 import com.lu.indexpagedemo.view.viewholders.DragPicViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomSelectorActivity extends AppCompatActivity
-        implements View.OnClickListener,
+public class CustomSelectorActivity extends MvpBaseActivity<CustomSelectContract.View,CustomPresenterImpl>
+        implements  CustomSelectContract.View,View.OnClickListener,
         NavigationTabStrip.OnTabStripSelectedIndexListener,
         RadioGroup.OnCheckedChangeListener,
         AdapterView.OnItemSelectedListener{
@@ -86,6 +87,7 @@ public class CustomSelectorActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_custom_selector);
         initView();
 
@@ -115,6 +117,11 @@ public class CustomSelectorActivity extends AppCompatActivity
             }
         });
 
+    }
+
+    @Override
+    protected CustomPresenterImpl createPresent() {
+        return new CustomPresenterImpl();
     }
 
     @Override

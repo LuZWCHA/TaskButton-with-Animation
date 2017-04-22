@@ -1,5 +1,6 @@
 package com.lu.indexpagedemo.view.fragments.IndexPageInnerFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.loadmore.SimpleLoadMoreView;
+import com.lu.indexpagedemo.bean.ListShowBean;
 import com.lu.indexpagedemo.bean.PagesPickerBean;
 import com.lu.indexpagedemo.base.rxjava.Notifys.MyNotifys;
 import com.lu.indexpagedemo.base.Tools.AppManager;
@@ -20,6 +22,7 @@ import com.lu.indexpagedemo.base.mvp.MvpBaseFragment;
 import com.lu.indexpagedemo.presenter.RecommendPresenterImpl;
 import com.lu.indexpagedemo.base.rxjava.RxBus;
 import com.lu.indexpagedemo.base.Tools.Utils;
+import com.lu.indexpagedemo.view.activitys.WorkDetailsActivity;
 import com.lu.indexpagedemo.view.adapters.MyMultiAdapter;
 import com.lu.indexpagedemo.view.adapters.MyRecyclerView;
 
@@ -106,7 +109,14 @@ public class RecommendFragment extends MvpBaseFragment<RecommendContract.View,Re
 
     @Override
     public void updateList(PagesPickerBean<IBaseBean> pagesPickerBean) {
+
         myMultiAdapter.addData(pagesPickerBean.getData());
+        myMultiAdapter.addPage();
+
+        if(!pagesPickerBean.isNext())
+            myMultiAdapter.loadMoreEnd();
+        else
+            myMultiAdapter.loadMoreComplete();
         Log.e("size",myMultiAdapter.getData().size()+","+myMultiAdapter.getPage());
     }
 
@@ -116,22 +126,11 @@ public class RecommendFragment extends MvpBaseFragment<RecommendContract.View,Re
         myMultiAdapter.setNewData(pagesPickerBean.getData());
     }
 
-
-    @Override
-    public void loadMoreEnd() {
-        myMultiAdapter.loadMoreEnd();
-    }
-
     @Override
     public void loadMoreFaile() {
         myMultiAdapter.loadMoreFail();
     }
 
-    @Override
-    public void loadMoreComplete() {
-        myMultiAdapter.loadMoreComplete();
-        myMultiAdapter.addPage();
-    }
 
     @Override
     public String getTAG() {
@@ -147,5 +146,8 @@ public class RecommendFragment extends MvpBaseFragment<RecommendContract.View,Re
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         Utils.MakeTost(false,"item at "+position);
+        Intent intent = new Intent(this.getActivity(), WorkDetailsActivity.class);
+        intent.putExtra("id",myMultiAdapter.getData().get(position).getUID());
+        startActivity(intent);
     }
 }

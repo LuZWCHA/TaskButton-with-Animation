@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lu.indexpagedemo.view.activitys.WorkDetailsActivity">
 
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/load_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/colorAccent"/>
+
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/work_detail_rootview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -56,9 +66,10 @@
                                 android:textSize="16dp" />
 
                             <TextView
+                                android:id="@+id/work_detail_designer_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="ALEX"
+                                android:text="--"
                                 android:textColor="@color/colorAccent"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -78,7 +89,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2311"
+                                android:text="N/A"
                                 android:textSize="12sp" />
 
                             <TextView
@@ -95,7 +106,7 @@
                         android:layout_height="64dp"
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginEnd="20dp"
-                        app:actualImageResource="@drawable/ic_designer_6"
+                        app:placeholderImage="@color/colorWarmgray"
                         app:roundAsCircle="true" />
 
                 </LinearLayout>
@@ -118,6 +129,7 @@
                         android:textSize="@dimen/sp_14" />
 
                     <TextView
+                        android:id="@+id/work_detail_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/dp_10"
@@ -175,20 +187,27 @@
             </LinearLayout>
 
             <com.tencent.smtt.sdk.WebView
+                android:background="@color/white"
+                android:paddingTop="20dp"
+                android:id="@+id/work_detail_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
             </com.tencent.smtt.sdk.WebView>
+
             <android.support.v4.widget.Space
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="56dp" />
 
         </LinearLayout>
+
     </android.support.v4.widget.NestedScrollView>
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/work_detail_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         app:contentInsetEnd="0dp"
         app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_36dp">
 
@@ -199,42 +218,49 @@
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/work_detail_like_button"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
                 android:layout_margin="@dimen/dp_10"
                 app:actualImageResource="@drawable/ic_like" />
         </android.support.v7.widget.FitWindowsLinearLayout>
 
     </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="bottom"
         android:background="@color/white">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="20dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
                     android:text="@string/Yuan2"
-                    android:textSize="@dimen/sp_16"/>
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
                 <TextView
+                    android:id="@+id/work_detail_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:textColor="@color/black"
-                    android:textSize="@dimen/sp_16"
-                    android:text="2111"/>
+                    android:textSize="@dimen/sp_16" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -244,14 +270,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/sp_12"
-                    android:text="121"/>
+                    android:text=""
+                    android:textSize="@dimen/sp_12" />
 
                 <TextView
+                    android:id="@+id/work_detail_chat_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="条评论"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -259,22 +286,22 @@
             android:id="@+id/work_detail_give_issues"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:background="@drawable/ic_messages1"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_messages1" />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/work_detail_add_into_cart"
             style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
-            android:minWidth="100dp"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="@dimen/dp_10"
             android:layout_marginStart="20dp"
             android:background="@drawable/round_button"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_12"
+            android:minWidth="100dp"
             android:text="加入购物车"
-            />
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
     </LinearLayout>
-</FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

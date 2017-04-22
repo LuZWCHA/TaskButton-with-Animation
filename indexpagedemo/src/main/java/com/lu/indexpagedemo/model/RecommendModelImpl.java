@@ -5,7 +5,7 @@ import com.lu.indexpagedemo.Api.ApiStore;
 import com.lu.indexpagedemo.bean.MidPicBean;
 import com.lu.indexpagedemo.bean.MorePicBean;
 import com.lu.indexpagedemo.bean.PagesPickerBean;
-import com.lu.indexpagedemo.bean.RecommendBean;
+import com.lu.indexpagedemo.bean.ListShowBean;
 import com.lu.indexpagedemo.bean.base.HttpResponseBase;
 import com.lu.indexpagedemo.bean.base.IBaseBean;
 import com.lu.indexpagedemo.contract.RecommendContract;
@@ -58,23 +58,23 @@ public class RecommendModelImpl implements RecommendContract.Model {
         list.add(morePicBean);
         final PagesPickerBean<IBaseBean> myWrappedPickerBean = new PagesPickerBean<>();
         ApiStore apiStore = RetrofitClient.getInstance().getRetrofit().create(ApiStore.class);
-        Observable<HttpResponseBase<PagesPickerBean<RecommendBean>>> observer = apiStore.getRescommendList(page);
-        return observer.compose(RxSchedulers.<HttpResponseBase<PagesPickerBean<RecommendBean>>>compose())
-                .map(new BaseHttpmap<PagesPickerBean<RecommendBean>>())
-                .flatMap(new Function<PagesPickerBean<RecommendBean>, ObservableSource<RecommendBean>>() {
+        Observable<HttpResponseBase<PagesPickerBean<ListShowBean>>> observer = apiStore.getRescommendList(page);
+        return observer.compose(RxSchedulers.<HttpResponseBase<PagesPickerBean<ListShowBean>>>compose())
+                .map(new BaseHttpmap<PagesPickerBean<ListShowBean>>())
+                .flatMap(new Function<PagesPickerBean<ListShowBean>, ObservableSource<ListShowBean>>() {
 
                     @Override
-                    public ObservableSource<RecommendBean> apply(PagesPickerBean<RecommendBean> pagesPickerBean) throws Exception {
+                    public ObservableSource<ListShowBean> apply(PagesPickerBean<ListShowBean> pagesPickerBean) throws Exception {
                         myWrappedPickerBean.setNext(pagesPickerBean.isNext());
                         return Observable.fromIterable(pagesPickerBean.getData());
                     }
                 })
-                .collectInto(list, new BiConsumer<List<IBaseBean>, RecommendBean>() {
+                .collectInto(list, new BiConsumer<List<IBaseBean>, ListShowBean>() {
                     @Override
-                    public void accept(List<IBaseBean> iBaseBeen, RecommendBean recommendBean) throws Exception {
-                        recommendBean.setImage(Utils.AddBaseUrl(recommendBean.getImage()));
-                        recommendBean.setAvatarPath(Utils.AddBaseUrl(recommendBean.getAvatarPath()));
-                        iBaseBeen.add(recommendBean);
+                    public void accept(List<IBaseBean> iBaseBeen, ListShowBean listShowBean) throws Exception {
+                        listShowBean.setImage(Utils.AddBaseUrl(listShowBean.getImage()));
+                        listShowBean.setAvatarPath(Utils.AddBaseUrl(listShowBean.getAvatarPath()));
+                        iBaseBeen.add(listShowBean);
                     }
                 })
                 .map(new Function<List<IBaseBean>, PagesPickerBean<IBaseBean>>() {

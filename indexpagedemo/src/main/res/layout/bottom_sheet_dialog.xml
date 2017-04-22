@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/choose_size"
+            android:textSize="@dimen/sp_16"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/work_detail_size_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:entries="@array/custom_size_select">
+
+        </android.support.v7.widget.AppCompatSpinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/choose_material"
+            android:textSize="@dimen/sp_16"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/work_detail_material_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:entries="@array/custom_material_select">
+
+        </android.support.v7.widget.AppCompatSpinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/choose_num"
+            android:textSize="@dimen/sp_16"/>
+
+        <com.lu.indexpagedemo.bean.base.customview.GoodsView
+            android:id="@+id/work_detail_num_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            app:lu_minnum="1"
+            app:lu_maxnum="99"
+            app:decreaseRes="@drawable/ic_minus"
+            app:increaseRes="@drawable/ic_plus">
+
+        </com.lu.indexpagedemo.bean.base.customview.GoodsView>
+    </LinearLayout>
+
+
+</LinearLayout>

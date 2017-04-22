@@ -3,12 +3,14 @@ package com.lu.indexpagedemo.view.fragments.NowPageInnerFragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -25,6 +27,7 @@ import com.lu.indexpagedemo.contract.NowMaterialContract;
 import com.lu.indexpagedemo.presenter.NowMaterialPresenterImpl;
 import com.lu.indexpagedemo.view.adapters.MyRecyclerView;
 import com.lu.indexpagedemo.view.adapters.MySimpleAdapter;
+import com.lu.indexpagedemo.view.simpleviews.fixtures.MessagesFixtures;
 import com.stfalcon.chatkit.utils.FrescoAutoFit;
 
 import java.util.ArrayList;
@@ -70,16 +73,16 @@ public class NowMaterialFragment extends MvpBaseFragment<NowMaterialContract.Vie
         mMaterialAdapter = new MaterialAdapter(R.layout.recyclerview_item_only_pics);
         mMaterialAdapter.bindToRecyclerView(mNowMaterialRecyclerView);
 
-        String[] urls = getResources().getStringArray(R.array.test);
-
         mNowMaterialRecyclerView.setAdapter(mMaterialAdapter);
         mMaterialAdapter.setEmptyView(R.layout.recylcerview_emptyview);
         mMaterialAdapter.setOnItemChildClickListener(this);
 
-        for (String url : urls) {
-            mMaterialAdapter.addData(new MaterialBean(url));
-            Log.e("urls",url);
+        ArrayList<MaterialBean> materialBeanArrayList = new ArrayList<>();
+        for (int i = 0;i<50;i++) {
+            materialBeanArrayList.add(new MaterialBean(MessagesFixtures.getMaterialImage()));
         }
+        mMaterialAdapter.setNewData(materialBeanArrayList);
+
     }
 
     @Override
@@ -110,13 +113,17 @@ class MaterialAdapter extends MySimpleAdapter<MaterialBean, MaterialAdapter.Mate
 
     @Override
     protected void convert(MaterialViewHolder helper, MaterialBean item) {
-        FrescoAutoFit.setControllerListener((SimpleDraweeView)helper.getView(R.id.now_item_pic),item.getImageUrl(),Constant.screenwithpx/2);
+        FrescoAutoFit.setControllerListener((SimpleDraweeView)helper.getView(R.id.now_item_pic),item.getImageUrl(), (Constant.screenwithpx>>1));
     }
 
     class MaterialViewHolder extends BaseViewHolder {
 
         public MaterialViewHolder(View view) {
             super(view);
+            SimpleDraweeView simpleDraweeView = getView(R.id.now_item_pic);
+            ViewGroup.LayoutParams layoutParams= simpleDraweeView.getLayoutParams();
+            layoutParams.width = Constant.screenwithpx>>1;
+            simpleDraweeView.setLayoutParams(layoutParams);
             addOnClickListener(R.id.now_item_pic);
         }
     }

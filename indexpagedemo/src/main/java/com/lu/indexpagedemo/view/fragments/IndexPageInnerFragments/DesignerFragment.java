@@ -114,23 +114,18 @@ public class DesignerFragment extends MvpBaseFragment<DesingerContract.View,Desi
     @Override
     public void updateList(PagesPickerBean<IBaseBean> desingerList) {
         myMultiAdapter.addData(desingerList.getData());
+        myMultiAdapter.addPage();
+        if(!desingerList.isNext()){
+            myMultiAdapter.loadMoreEnd();
+        }else {
+            myMultiAdapter.loadMoreComplete();
+        }
         //Log.e("size",myMultiAdapter.getData().size()+","+myMultiAdapter.getPage());
     }
 
     @Override
     public void loadMoreFaile() {
         myMultiAdapter.loadMoreFail();
-    }
-
-    @Override
-    public void loadMoreEnd() {
-        myMultiAdapter.loadMoreEnd();
-    }
-
-    @Override
-    public void loadMoreComplete() {
-        myMultiAdapter.loadMoreComplete();
-        myMultiAdapter.addPage();
     }
 
     @Override

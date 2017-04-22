@@ -3,7 +3,6 @@ import android.graphics.Color;
 
 import com.lu.mydemos.contract.UserLoginContract;
 import com.lu.mydemos.mvp.BasePresenterImpl;
-import com.lu.mydemos.view.Login;
 
 import java.util.Timer;
 import java.util.TimerTask;

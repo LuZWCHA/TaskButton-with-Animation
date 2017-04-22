@@ -4,14 +4,12 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lu.indexpagedemo.R;
-import com.lu.indexpagedemo.bean.AddressBean;
 import com.lu.indexpagedemo.bean.DesignerBean;
-import com.lu.indexpagedemo.bean.RecommendBean;
+import com.lu.indexpagedemo.bean.ListShowBean;
 import com.lu.indexpagedemo.bean.MidPicBean;
 import com.lu.indexpagedemo.bean.MorePicBean;
 import com.lu.indexpagedemo.bean.WorkBean;
 import com.lu.indexpagedemo.view.adapters.BaseViewHolder;
-import com.lu.indexpagedemo.view.viewholders.AddressViewHolder;
 import com.lu.indexpagedemo.view.viewholders.DesignerViewHolder;
 import com.lu.indexpagedemo.view.viewholders.RecommendViewHolder;
 import com.lu.indexpagedemo.view.viewholders.MidImageViewHolder;
@@ -35,7 +33,7 @@ public class RecyclerViewBeanFactory implements IBeanFactory,IViewHolderFactory 
     }
 
     @Override
-    public int select(RecommendBean recommendBean) {
+    public int select(ListShowBean listShowBean) {
             return RECOMMEND_TYPE1;
     }
 

@@ -21,9 +21,7 @@ public interface View extends BaseView{
 
     void loadMoreFaile();
 
-    void loadMoreEnd();
 
-    void loadMoreComplete();
 }
 
 

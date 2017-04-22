@@ -8,47 +8,28 @@ import com.lu.indexpagedemo.bean.factories.RecyclerViewBeanFactory;
  */
 
 public class WorkBean implements IBaseBean{
-    /**
-     * id : 1
-     * nickname : ""
-     * title : woshi
-     * content : jfdska
-     * time : 2017-04-05 20:05:17
-     * star : 0
-     * collection : 0
-     * image : /owap/public/patent/20170405/5a5c92bbb1b0f4a11234ccd8ee9fbe4a.jpg
-     */
 
     /**
-     * id : 10
+     * id : 20
      * nickname : zimo
-     * title : woshi
-     * image : /owap/public/patent/20170407/16ca96b73f83ad0211602a324984ad72.jpg
-     * avatarPath : /owap/public/patent/20170407/d9b576db13d5fc8cf0169c8eb7d2d78d.jpg
+     * title : 666
+     * content : 你好
+     * time : 2017-04-07 23:33:22
+     * star : 0
+     * collection : 0
+     * image : /owap/public/patent/20170407/76666051c8638f5ee9e20fb5b26b90b9.png
+     * price : 40
      */
-    // TODO: 2017/4/20 尺寸和材质等待添加
+
     private Long id;
     private String nickname;
     private String title;
+    private String content;
+    private String time;
+    private int star;
+    private int collection;
     private String image;
-    private String avatarPath;
     private int price;
-
-    public WorkBean(){
-        nickname = "";
-        title = "";
-        image = "";
-        avatarPath = "";
-        price = 100;
-    }
-
-    public WorkBean(String nickname, String title, String image, String avatarPath, int price) {
-        this.nickname = nickname;
-        this.title = title;
-        this.image = image;
-        this.avatarPath = avatarPath;
-        this.price = price;
-    }
 
     public Long getId() {
         return id;
@@ -74,6 +55,38 @@ public class WorkBean implements IBaseBean{
         this.title = title;
     }
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public int getStar() {
+        return star;
+    }
+
+    public void setStar(int star) {
+        this.star = star;
+    }
+
+    public int getCollection() {
+        return collection;
+    }
+
+    public void setCollection(int collection) {
+        this.collection = collection;
+    }
+
     public String getImage() {
         return image;
     }
@@ -82,12 +95,12 @@ public class WorkBean implements IBaseBean{
         this.image = image;
     }
 
-    public String getAvatarPath() {
-        return avatarPath;
+    public int getPrice() {
+        return price;
     }
 
-    public void setAvatarPath(String avatarPath) {
-        this.avatarPath = avatarPath;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
@@ -99,11 +112,4 @@ public class WorkBean implements IBaseBean{
         return id;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
 }

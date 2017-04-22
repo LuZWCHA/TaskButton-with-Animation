@@ -59,6 +59,10 @@ public final class MessagesFixtures extends FixturesData {
         return getRandomArticleImage();
     }
 
+    public static String getMaterialImage(){
+        return getRandomMaterialImage();
+    }
+
     public static ArrayList<Message> getMessages(Date startDate) {
         ArrayList<Message> messages = new ArrayList<>();
         for (int i = 0; i < 10/*days count*/; i++) {

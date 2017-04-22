@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/dp_4">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/now_tie_method_title"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            style="@style/title_normal_style"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+            android:maxLines="2"
+            android:text="这六种围巾系法你知道吗？" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/now_tie_method_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:roundAsCircle="true"
+                app:placeholderImage="@color/colorInActive"/>
+
+            <TextView
+                android:id="@+id/now_tie_method_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_10"
+                android:textColor="@color/colorOrange"
+                android:textSize="@dimen/sp_14"
+                android:text="ALEX"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10">
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@null"
+                android:foreground="@drawable/ic_main_bottombar_love"/>
+            <TextView
+                android:id="@+id/now_tie_method_like_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/small_sub_introduction"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="45"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@null"
+                android:layout_marginStart="@dimen/dp_10"
+                android:foreground="@drawable/ic_information"/>
+
+            <TextView
+                android:id="@+id/now_tie_method_chat_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/small_sub_introduction"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="34"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/now_tie_method_image"
+        android:layout_width="128dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:placeholderImage="@color/colorInActive"/>
+
+</LinearLayout>

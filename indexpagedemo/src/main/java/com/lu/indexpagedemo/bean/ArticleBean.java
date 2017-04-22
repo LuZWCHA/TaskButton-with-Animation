@@ -19,13 +19,17 @@ public class ArticleBean implements IBaseBean{
     private String article;
     private String time;
     private String imageUrl;
+    private int beenlikedNum;
+    private int chattingNum;
 
-    public ArticleBean(User user, String title, String aticle, String time, String imageUrl) {
+    public ArticleBean(User user, String title, String article, String time, String imageUrl,int beenlikedNum,int chattingNum) {
         this.user = user;
         this.title = title;
-        this.article= aticle;
+        this.article= article;
         this.time = time;
         this.imageUrl = imageUrl;
+        this.beenlikedNum = beenlikedNum;
+        this.chattingNum = chattingNum;
     }
 
     public User getUser() {
@@ -63,7 +67,7 @@ public class ArticleBean implements IBaseBean{
     public static ArticleBean makeArticleBean(){
 
         return new ArticleBean(DialogsFixtures.getUser(),"THIS IS A TEST TITLE","no centent now,please wiat...",
-                TimeUtils.getCurTimeMDH(), MessagesFixtures.getArticleImage());
+                TimeUtils.getCurTimeMDH(), MessagesFixtures.getArticleImage(),(int)(Math.random()*100),(int)(Math.random()*100));
     }
 
     @Override
@@ -92,5 +96,21 @@ public class ArticleBean implements IBaseBean{
     @Override
     public long getUID() {
         return 0;
+    }
+
+    public int getBeenlikedNum() {
+        return beenlikedNum;
+    }
+
+    public void setBeenlikedNum(int beenlikedNum) {
+        this.beenlikedNum = beenlikedNum;
+    }
+
+    public int getChattingNum() {
+        return chattingNum;
+    }
+
+    public void setChattingNum(int chattingNum) {
+        this.chattingNum = chattingNum;
     }
 }

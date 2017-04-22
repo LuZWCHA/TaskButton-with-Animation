@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:background="@color/colorMainBackGround"
         app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_36dp"
-        app:title="开始定制"></android.support.v7.widget.Toolbar>
+        app:title="开始定制" />
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -192,6 +192,7 @@
                             android:layout_marginEnd="24dp"/>
 
                     </LinearLayout>
+                    <!--选择尺寸-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="56dp">
@@ -243,6 +244,7 @@
                             android:hint="@string/custom_hint_num"/>
 
                     </LinearLayout>
+
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -301,7 +303,7 @@
                 android:textSize="24sp" />
 
         </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>
 
 

@@ -17,9 +17,7 @@ public interface RecommendContract {
         void initList(PagesPickerBean<IBaseBean> pagesPickerBean);
         void updateList(PagesPickerBean<IBaseBean> pagesPickerBean);
         void refreshList(PagesPickerBean<IBaseBean> pagesPickerBean);
-        void loadMoreEnd();
         void loadMoreFaile();
-        void loadMoreComplete();
     }
 
     interface Model extends BaseModel{

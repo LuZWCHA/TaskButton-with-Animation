@@ -52,17 +52,18 @@ public class QSdkApp {
                 "<head>\n" +
                 "<style type=\"text/css\">\n" +
                 "body {word-wrap:break-word; overflow:hidden;font-size:100%;margin-left:5%;margin-right:5%}\n" +
-                "img {margin-top:5%;margin-bottom:5%}\n"+
+                "img {margin:5%}\n"+
                 "p {font-size: 1em}\n" +
                 "</style>\n" +
-                "</head><html><body>" + html + "</body></html>";
+                "</head>" +
+                "<html><body>" + html + "</body></html>";
 
         WebSettings webSettings = mWebView.getSettings();
         initWebViewSettings(mWebView);
 
         mWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         mWebView.setWebChromeClient(webViewClient);
-        mWebView.getX5WebViewExtension().setScrollBarFadingEnabled(false);
+        //mWebView.getX5WebViewExtension().setScrollBarFadingEnabled(false);
 
         mWebView.loadDataWithBaseURL(RetrofitClient.BASE_URL,html, "text/html", "utf-8",null);
     }

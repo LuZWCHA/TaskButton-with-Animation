@@ -34,7 +34,6 @@ public class WorksPresenterImpl extends BasePresenterImpl<WorksContract.View>{
             public void onSubscribe(Disposable d) {
                 Utils.MakeTost(false,"works");
                 Log.e("Work","update");
-
             }
 
             @Override
@@ -45,6 +44,7 @@ public class WorksPresenterImpl extends BasePresenterImpl<WorksContract.View>{
             @Override
             public void onError(Throwable e) {
                 Utils.MakeTost(true,"数据更新失败！");
+                getView().loadMoreFail();
                 EventBus.getDefault().post(new MyNotifys.UpdateFinishNotify());
             }
 

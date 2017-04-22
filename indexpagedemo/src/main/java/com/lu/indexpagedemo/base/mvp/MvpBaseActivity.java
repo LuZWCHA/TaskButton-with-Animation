@@ -1,8 +1,13 @@
 package com.lu.indexpagedemo.base.mvp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
+import com.lu.indexpagedemo.base.Tools.Utils;
 import com.lu.indexpagedemo.base.mvp.Baseinterfaces.BaseView;
 
 import io.reactivex.disposables.CompositeDisposable;
@@ -31,6 +36,7 @@ public abstract class MvpBaseActivity<V extends BaseView,P extends BasePresenter
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.TRANSPARENT(getWindow());
         mPresenter = createPresent();
         mPresenter.attachView((V)this);
     }

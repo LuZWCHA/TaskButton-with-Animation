@@ -234,14 +234,14 @@ public class IndexPageFragment extends MvpBaseFragment<IndexPageContract.View, I
 }
 
 class TestLoopAdapter extends LoopPagerAdapter {
-    private List<String> imageUrls = new ArrayList<>();
+    private List<String> imageUrls;
 
-    public TestLoopAdapter(@NonNull RollPagerView viewPager) {
+    TestLoopAdapter(@NonNull RollPagerView viewPager) {
         super(viewPager);
         this.imageUrls = new ArrayList<>();
     }
 
-    public void updateViewData(List<String> newdata) {
+    void updateViewData(List<String> newdata) {
         imageUrls = newdata;
         notifyDataSetChanged();
     }

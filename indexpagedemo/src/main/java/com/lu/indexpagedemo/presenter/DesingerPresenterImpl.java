@@ -38,10 +38,6 @@ public class DesingerPresenterImpl extends BasePresenterImpl<DesingerContract.Vi
             @Override
             public void onNext(PagesPickerBean<IBaseBean> value) {
                 getView().updateList(value);
-                if(!value.isNext())
-                    getView().loadMoreEnd();
-                else
-                    getView().loadMoreComplete();
             }
 
             @Override
@@ -68,10 +64,6 @@ public class DesingerPresenterImpl extends BasePresenterImpl<DesingerContract.Vi
             @Override
             public void onNext(PagesPickerBean<IBaseBean> value) {
                 getView().refreshData(value);
-                if(!value.isNext())
-                    getView().loadMoreEnd();
-                else
-                    getView().loadMoreComplete();
             }
 
             @Override

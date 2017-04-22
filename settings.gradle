@@ -1,1 +1,1 @@
-include ':app', ':mytaskbutton', ':mytablayout', ':indexpagedemo', ':detilpagedemo', ':welcomeloginpagedemos', ':uploaddemo', ':chatkit', ':chatdemo'
+include ':app', ':indexpagedemo', ':uploaddemo', ':chatkit', ':chatdemo'

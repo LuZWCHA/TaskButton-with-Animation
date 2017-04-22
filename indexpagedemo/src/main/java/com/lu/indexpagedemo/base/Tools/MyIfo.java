@@ -30,4 +30,7 @@ public class MyIfo {
         self = user;
     }
     //others information
+    public static void MakeUser(){
+
+    }
 }

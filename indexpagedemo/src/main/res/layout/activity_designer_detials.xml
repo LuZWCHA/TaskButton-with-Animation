@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lu.indexpagedemo.view.simpleviews.DesignerDetailsActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="422dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/designer_details_background"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:placeholderImage="@color/colorInActive" />
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/designer_details_avatar_path"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_alignBottom="@+id/designer_details_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="41dp"
+            app:placeholderImage="@color/colorWarmgray"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/designer_details_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/designer_details_background"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/designer_details_avatar_path"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp">
+
+            <TextView
+                android:id="@+id/designer_details_been_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="210"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:text="关注者"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/designer_details_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:text="关注"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/designer_details_focus_button"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/stroke_corners_rectangle"
+            android:text="关  注"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <com.lu.indexpagedemo.view.adapters.MyRecyclerView
+        android:id="@+id/designer_details_works"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.lu.indexpagedemo.view.adapters.MyRecyclerView>
+
+</LinearLayout>

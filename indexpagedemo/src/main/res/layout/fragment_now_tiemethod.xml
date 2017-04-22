@@ -4,7 +4,12 @@
     android:layout_height="match_parent"
     tools:context="com.lu.indexpagedemo.view.fragments.NowPageInnerFragments.NowTieMethodFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.lu.indexpagedemo.view.adapters.MyRecyclerView
+        android:id="@+id/now_tie_method_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.lu.indexpagedemo.view.adapters.MyRecyclerView>
 
 
 </FrameLayout>

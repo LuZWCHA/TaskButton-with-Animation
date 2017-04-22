@@ -11,12 +11,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/chatdemo" />
             <option value="$PROJECT_DIR$/chatkit" />
-            <option value="$PROJECT_DIR$/detilpagedemo" />
             <option value="$PROJECT_DIR$/indexpagedemo" />
-            <option value="$PROJECT_DIR$/mytablayout" />
-            <option value="$PROJECT_DIR$/mytaskbutton" />
             <option value="$PROJECT_DIR$/uploaddemo" />
-            <option value="$PROJECT_DIR$/welcomeloginpagedemos" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

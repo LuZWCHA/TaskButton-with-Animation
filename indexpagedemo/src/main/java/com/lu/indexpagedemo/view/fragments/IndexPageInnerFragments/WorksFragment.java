@@ -71,35 +71,13 @@ public class WorksFragment extends MvpBaseFragment<WorksContract.View,WorksPrese
             myMultiAdapter.disableLoadMoreIfNotFullPage();
             myMultiAdapter.setLoadMoreView(new SimpleLoadMoreView());
             myMultiAdapter.setEmptyView(R.layout.recylcerview_emptyview);
+
             myMultiAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
                 @Override
                 public void onLoadMoreRequested() {
-                    Observable.just("load")
-                            .delay(5, TimeUnit.SECONDS)
-                            .compose(RxSchedulers.<String>compose())
-                            .subscribe(new Observer<String>() {
-                                @Override
-                                public void onSubscribe(Disposable d) {
-                                    Utils.MakeTost(false,"start load");
-                                }
-
-                                @Override
-                                public void onNext(String value) {
-
-                                }
-
-                                @Override
-                                public void onError(Throwable e) {
-                                    myMultiAdapter.loadMoreFail();
-                                }
-
-                                @Override
-                                public void onComplete() {
-                                    //myMultiAdapter.loadMoreComplete();
-                                }
-                            });
+                    mPresenter.updateData(myMultiAdapter.getPage());
                 }
-            });
+            },myRecyclerView);
 
         }
         return rootView;
@@ -119,12 +97,24 @@ public class WorksFragment extends MvpBaseFragment<WorksContract.View,WorksPrese
 
     @Override
     public void updateList(PagesPickerBean<IBaseBean> worksList) {
+        myMultiAdapter.addData(worksList.getData());
+        myMultiAdapter.addPage();
 
+        if(!worksList.isNext())
+            myMultiAdapter.loadMoreEnd();
+        else
+            myMultiAdapter.loadMoreComplete();
     }
 
     @Override
-    public void refreData(PagesPickerBean<IBaseBean> worksList) {
+    public void referData(PagesPickerBean<IBaseBean> worksList) {
+        myMultiAdapter.resetPage();
+        myMultiAdapter.setNewData(worksList.getData());
+    }
 
+    @Override
+    public void loadMoreFail() {
+        myMultiAdapter.loadMoreFail();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

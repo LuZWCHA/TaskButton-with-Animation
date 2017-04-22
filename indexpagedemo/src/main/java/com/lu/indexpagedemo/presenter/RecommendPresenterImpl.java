@@ -43,10 +43,6 @@ public class RecommendPresenterImpl extends BasePresenterImpl<RecommendContract.
             public void onNext(PagesPickerBean<IBaseBean> value) {
                 Log.e("size",value.getData().size()+"");
                 getView().updateList(value);
-                if(!value.isNext())
-                    getView().loadMoreEnd();
-                else
-                    getView().loadMoreComplete();
             }
 
             @Override
@@ -73,10 +69,6 @@ public class RecommendPresenterImpl extends BasePresenterImpl<RecommendContract.
             @Override
             public void onNext(PagesPickerBean<IBaseBean> value) {
                 getView().refreshList(value);
-                if(!value.isNext())
-                    getView().loadMoreEnd();
-                else
-                    getView().loadMoreComplete();
             }
 
             @Override

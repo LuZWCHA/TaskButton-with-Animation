@@ -1,11 +1,16 @@
 package com.lu.indexpagedemo.base.mvp.ChatBaseActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.lu.indexpagedemo.base.Tools.Utils;
 import com.lu.indexpagedemo.base.mvp.ChatBaseActivity.Model.Dialog;
 import com.stfalcon.chatkit.commons.ImageLoader;
 import com.stfalcon.chatkit.dialogs.DialogsListAdapter;
@@ -23,6 +28,7 @@ public class ChatDialogActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.TRANSPARENT(getWindow());
 
         imageLoader = new ImageLoader() {
             @Override

@@ -30,6 +30,11 @@
         <item>50x50(cm)</item>
     </array>
 
+    <array name="custom_material_select">
+        <item>丝巾</item>
+        <item>围巾</item>
+    </array>
+
     <array name="test">
         <item>https://images.pexels.com/photos/267007/pexels-photo-267007.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
         <item>https://images.pexels.com/photos/270102/pexels-photo-270101.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
@@ -41,5 +46,6 @@
         <item>https://images.pexels.com/photos/223023/pexels-photo-223023.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
         <item>https://images.pexels.com/photos/223022/pexels-photo-223022.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
         <item>https://images.pexels.com/photos/199373/pexels-photo-199373.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb</item>
+
     </array>
 </resources>

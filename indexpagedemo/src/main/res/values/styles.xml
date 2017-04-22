@@ -33,5 +33,20 @@
         <!-- Hint for edit text-->
         <item name="android:hint">输入设计师或你感兴趣的话题...</item>
     </style>
-    
+
+    <style name="title_normal_style">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="small_introduction">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="small_sub_introduction">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
 </resources>

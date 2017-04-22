@@ -1,16 +1,21 @@
 package com.lu.indexpagedemo.base.mvp.ChatBaseActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import com.lu.indexpagedemo.R;
 import com.lu.indexpagedemo.base.Tools.Constant;
+import com.lu.indexpagedemo.base.Tools.Utils;
 import com.lu.indexpagedemo.base.mvp.ChatBaseActivity.Model.Message;
 import com.stfalcon.chatkit.commons.ImageLoader;
 import com.stfalcon.chatkit.messages.MessagesListAdapter;
@@ -42,6 +47,8 @@ public class ChatMessageActivity extends AppCompatActivity
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.TRANSPARENT(getWindow());
+
 
         imageLoader = new ImageLoader() {
             @Override

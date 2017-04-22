@@ -19,12 +19,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.activitys.MainActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop">
         </activity>
         <activity android:name=".view.activitys.MyOrderActivity" />
         <activity android:name=".view.activitys.MyInformationActivity" />
@@ -41,7 +37,24 @@
         <activity android:name=".view.activitys.TestActivity" />
         <activity android:name=".view.simpleviews.DailogActivity" />
         <activity android:name=".view.simpleviews.MessageActivity" />
-        <activity android:name=".view.activitys.WorkDetailsActivity"></activity>
+        <activity android:name=".view.activitys.WorkDetailsActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".view.simpleviews.OrdinaryUserDetailsActivity" />
+        <activity android:name=".view.simpleviews.DesignerDetailsActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".view.simpleviews.ArticleDetailsActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".view.simpleviews.WorkDetailsActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".view.activitys.LoginActivity" />
+        <activity android:name=".view.activitys.RegisterActivity" />
+        <activity android:name=".view.simpleviews.WellcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

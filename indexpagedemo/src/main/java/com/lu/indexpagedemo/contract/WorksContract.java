@@ -14,7 +14,8 @@ import io.reactivex.Observable;
 public interface WorksContract {
     interface View extends BaseView{
         void updateList(PagesPickerBean<IBaseBean> worksList);
-        void refreData(PagesPickerBean<IBaseBean> worksList);
+        void referData(PagesPickerBean<IBaseBean> worksList);
+        void loadMoreFail();
     }
 
     interface Model extends BaseModel{

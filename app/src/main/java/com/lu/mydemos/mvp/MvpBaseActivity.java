@@ -1,14 +1,10 @@
 package com.lu.mydemos.mvp;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.lu.mydemos.mvp.Baseinterfaces.BaseView;
-import com.lu.mydemos.view.Login;
-
-import java.util.Objects;
 
 /**
  * Created by 陆正威 on 2017/3/31.

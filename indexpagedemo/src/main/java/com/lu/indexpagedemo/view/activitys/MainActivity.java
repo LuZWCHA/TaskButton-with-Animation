@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.lu.indexpagedemo.R;
+import com.lu.indexpagedemo.base.Tools.Utils;
 import com.lu.indexpagedemo.base.mvp.MvpBaseFragment;
 import com.lu.indexpagedemo.base.rxjava.Notifys.BottomBarToggler;
 import com.lu.indexpagedemo.bean.base.customview.BottomBar;
@@ -34,6 +35,7 @@ public class MainActivity extends SupportActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.TRANSPARENT(getWindow());
         setContentView(R.layout.activity_main);
 
         if(savedInstanceState == null) {
